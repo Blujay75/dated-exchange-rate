@@ -11,10 +11,11 @@ Selected OAuth Scopes:
  - Perform requests on your behalf at any time (refresh_token, offline_access)
  
  You will need:
- <strong>myDomain</strong> = your Salesforce domain name
- #consumerKey# = The Consumer Key generated from the Connected App
- #herukoAppURL# = The URL of the Heroku App, this needs to be exactly as entered in the Connected App
- 
+ <ul>
+ <li>#myDomain# = your Salesforce domain name</li>
+ <li>#consumerKey# = The Consumer Key generated from the Connected App</li>
+ <li>#herukoAppURL# = The URL of the Heroku App, this needs to be exactly as entered in the Connected App</li>
+ </ul>
  Navigate to the following URL:
  
  https://#myDomain#.my.salesforce.com/services/oauth2/authorize?response_type=code&client_id=#consumerKey#&redirect_uri=#herukoAppURL#
