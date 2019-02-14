@@ -11,7 +11,7 @@ Selected OAuth Scopes:
  - Perform requests on your behalf at any time (refresh_token, offline_access)
  
  You will need:
- #myDomain# = your Salesforce domain name
+ <strong>myDomain</strong> = your Salesforce domain name
  #consumerKey# = The Consumer Key generated from the Connected App
  #herukoAppURL# = The URL of the Heroku App, this needs to be exactly as entered in the Connected App
  
