@@ -8,16 +8,13 @@ function validateForm() {
 	var theForm = document.forms["myForm"];
     theForm.action = "submitAsNormal.php"
   } else {
-	//const Url = 'https://blujay75-developer-edition.eu37.force.com/services/apexrest/Account/0012400000EEdUVAA1';
-	const Url = 'https://jsonplaceholder.typicode.com/todos/1';
+	const Url = 'https://blujay75-developer-edition.eu37.force.com/services/apexrest/Account/0012400000EEdUVAA1';
+	//const Url = 'https://jsonplaceholder.typicode.com/todos/1';
 	
 	fetch(Url)
 	.then(response => response.json())
 	.then(json => console.log(JSON.stringify(json)))
-	
-	/*.then(data=>{console.log(data.json())})
-	.then(res=>{console.log(res)})*/
-	
+		
     //alert("Running new routine");
 	return false;
   }
