@@ -12,7 +12,7 @@ function validateForm() {
 	const Url = 'https://jsonplaceholder.typicode.com/todos/1';
 	
 	fetch(Url)
-	//.then(response => response.json())
+	.then(response => response.json())
 	.then(json => console.log(JSON.stringify(json)))
 	
 	/*.then(data=>{console.log(data.json())})
