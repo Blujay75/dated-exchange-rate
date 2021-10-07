@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["AreaOfInterest"].value;
+  if (x != "/services/radiolabelled-sciences") {
+	var theForm = document.forms["myForm"];
+    theForm.action = "submitAsNormal.php"
+  } else {
+	//const Url = 'https://blujay75-developer-edition.eu37.force.com/services/apexrest/Account/0012400000EEdUVAA1';
+	const Url = 'https://jsonplaceholder.typicode.com/todos/1';
+	
+	fetch(Url)
+	//.then(response => response.json())
+	.then(json => console.log(JSON.stringify(json)))
+	
+	/*.then(data=>{console.log(data.json())})
+	.then(res=>{console.log(res)})*/
+	
+    //alert("Running new routine");
+	return false;
+  }
+}
+</script>
+</head>
+<body>
+
+	<h2>JavaScript Validation</h2>
+
+	<form name="myForm" action="#" onsubmit="return validateForm()" method="post">
+
+		<input name="Name" type="text" id="cphBody_ctl01_txtName" placeholder="Your name*" data-validate=""><br/>
+		
+		<input name="Company" type="text" id="cphBody_ctl01_txtCompany" class="text" placeholder="Company name*" data-validate=""><br/>
+
+		<select name="AreaOfInterest" id="cphBody_ctl01_ddlAreaOfInterest" data-ei-bound-to="1">
+			<option selected="selected" value="" disabled="">Area of Interest</option>
+			<option value="/services/laboratory-chemistry">Laboratory Chemistry</option>
+			<option value="/services/biosciences">Biosciences</option>
+			<option value="/services/chemistry-manufacturing-and-control">Chemistry, Manufacturing and Control</option>
+			<option value="/services/safety-assessment">Safety Assessment</option>
+			<option value="/services/radiolabelled-sciences">Radiolabelled Sciences</option>
+			<option value="/services/clinical-development">Clinical Development</option>
+			<option value="Other">Other</option>
+		</select><br/>
+
+		<input name="ctl00$cphBody$ctl01$txtPhone" type="text" id="cphBody_ctl01_txtPhone" placeholder="Phone Number"><br/>
+
+		<input name="ctl00$cphBody$ctl01$txtEmail" type="text" id="cphBody_ctl01_txtEmail" placeholder="Email Address*" data-validate="email"><br/>
+
+		<input type="file" name="ctl00$cphBody$ctl01$upDoc" id="cphBody_ctl01_upDoc" accept="application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,text/plain, application/pdf, application/vnd.apple.keynote, application/vnd.apple.pages, application/vnd.apple.numbers, image/*"><br/>
+
+		<textarea name="ctl00$cphBody$ctl01$txtMessage" rows="2" cols="20" id="cphBody_ctl01_txtMessage" placeholder="Your message..." style="height:120px;"></textarea><br/>
+		
+		<br/><br/>
+
+		<input type="submit" value="Submit">
+
+
+	</form>
+
+</body>
+</html>
