@@ -11,7 +11,10 @@ function validateForm() {
 	const Url = 'https://blujay75-developer-edition.eu37.force.com/services/apexrest/Account/0012400000EEdUVAA1';
 	//const Url = 'https://jsonplaceholder.typicode.com/todos/1';
 	
-	fetch(Url, {mode: "no-cors"})
+	fetch(Url, {
+		method: 'GET',
+		mode: 'no-cors',
+		credentials: 'same-origin',})
 	.then(response => response.json())
 	.then(json => console.log(JSON.stringify(json)))
 		
